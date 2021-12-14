@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const path = require('path');
 
 let jokes = require('./modules/jokes')
 
@@ -15,7 +15,11 @@ app.get('/rand-joke',cors(),(req, res) => {
 
 })
 
-
+app.get("/file",cors(),(req, res) => {
+    let linkOf = (path.resolve('./modules/json-files/abc.png'))
+    console.log(linkOf);
+    res.sendFile(path.resolve('./modules/json-files/abc.png'))
+})
 
 let port = 4600;
 
