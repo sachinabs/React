@@ -10,6 +10,8 @@ import {
 } from "../../../redux/Shopping/shopping-actions";
 
 const Product = ({ product, addToCart, loadCurrentItem }) => {
+
+
   return (
    
       <div className={styles.product}>
@@ -35,7 +37,7 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
           </button>
         </Link>
         <button
-          onClick={() => addToCart(product.id)}
+          onClick={() => {addToCart(product.id); alert(`${product.title} is added to cart ` ) }}
           className={`${styles.buttons__btn} ${styles.buttons__add}`}
         >
           Add To Cart
