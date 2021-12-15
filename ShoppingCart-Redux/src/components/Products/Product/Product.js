@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Product.module.css";
 
@@ -9,8 +9,14 @@ import {
   addToCart,
 } from "../../../redux/Shopping/shopping-actions";
 
-const Product = ({ product, addToCart, loadCurrentItem }) => {
 
+
+
+const Product = ({ product, addToCart, loadCurrentItem }) => {
+  const [numberOfproduct, setNumberOfproduct] = useState(1);
+  const numberOfproductCount = () =>{
+    setNumberOfproduct(prevActive => prevActive+1)
+  }
 
   return (
    
@@ -37,7 +43,7 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
           </button>
         </Link>
         <button
-          onClick={() => {addToCart(product.id); alert(`${product.title} is added to cart ` ) }}
+          onClick={() => {addToCart(product.id); numberOfproductCount(); alert(`  ${numberOfproduct  } product is added to cart ` ) }}
           className={`${styles.buttons__btn} ${styles.buttons__add}`}
         >
           Add To Cart
