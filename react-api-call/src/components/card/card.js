@@ -6,14 +6,20 @@ function Card() {
   const url = "http://localhost:4600/rand-joke";
   const [product, setProduuct] = useState(null);
   const [showpunch, setshowpunch] = useState(false);
+  const [reload, setreload] = useState(false);
+
   useEffect(() => {
     axios.get(url).then((response) => {
       setProduuct(response.data);
     });
-  }, [url]);
+  }, [reload]);
 
   if (product) {
     console.log(product);
+  
+  // function getNew(){
+  //   window.location.reload(true);
+  // }
 
     return (
       <div className="container">
@@ -21,8 +27,9 @@ function Card() {
           <p>{product.type}</p>
           <h3>{product.setup}</h3>
           {showpunch ? <h1 id="punchline">{product.punchline}</h1> : ""}
-          <button onClick={()=>setshowpunch(!showpunch)}>see punchline</button>
+          <button onClick={()=>{setshowpunch(1);}}>see punchline</button>
           <h5>{product.id}</h5>
+          <button onClick={()=>{setreload(!reload);setshowpunch(0);} }>Next</button>
         </div>
       </div>
     );
