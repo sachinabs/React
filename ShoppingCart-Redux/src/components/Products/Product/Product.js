@@ -11,7 +11,7 @@ import {
 
 const Product = ({ product, addToCart, loadCurrentItem }) => {
   return (
-    <continer>
+   
       <div className={styles.product}>
       <img
         className={styles.product__image}
@@ -42,7 +42,7 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
         </button>
       </div>
     </div>
-    </continer>
+   
   );
 };
 

@@ -13,6 +13,14 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
   const onChangeHandler = (e) => {
     setInput(e.target.value);
     adjustQty(item.id, e.target.value);
+   
+    let quantity = parseInt(e.target.value);
+    console.log(typeof(quantity));
+    if(quantity === 0)
+    {
+      removeFromCart(item.id);
+    }
+
   };
 
   return (
@@ -31,12 +39,13 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
         <div className={styles.cartItem__qty}>
           <label htmlFor="qty">Qty</label>
           <input
-            min="1"
+            min="0"
             type="number"
             id="qty"
             name="qty"
             value={input}
             onChange={onChangeHandler}
+            
           />
         </div>
         <button
