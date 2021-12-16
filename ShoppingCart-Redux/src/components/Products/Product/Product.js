@@ -11,7 +11,6 @@ import {
 
 
 
-
 const Product = ({ product, addToCart, loadCurrentItem }) => {
   const [numberOfproduct, setNumberOfproduct] = useState(1);
   const numberOfproductCount = () =>{
