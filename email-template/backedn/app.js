@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 
+const template = require('./template.json');
+
 
 let app = express();
 
@@ -9,7 +11,14 @@ app.get('/show/:category',cors(),(req, res)=>{
 
     let category = req.params.category
     console.log(category);
-    res.send(category);
+    if(category == "welcome")
+    { 
+        console.log("welcome");
+        var response = template.filter(list => list.categorie.includes("welcome"));
+        res.send(response);
+        console.log(response);
+    }
+    // console.log(template);
 })
 
 

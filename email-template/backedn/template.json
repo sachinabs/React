@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "welcome"
+    },
+    {
+        "id": 2,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "welcome"
+    },
+    {
+        "id": 3,
+        "logo": "",
+        "image": "",    
+        "imageText": "",
+        "footerText": "",
+        "categorie": "thankyou"
+    },
+    {
+        "id": 4,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "welcome"
+    },
+    {
+        "id": 5,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "orderFollowUp",
+        "bulletPoints": [
+            "point_1",
+            "point_2",
+            "point_3",
+            "point_4",
+            "point_5",
+            "point_6",
+            "point_7"
+        ]
+    },
+    {
+        "id": 6,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "orderFollowUp",
+        "bulletPoints": [
+            "point_1",
+            "point_2",
+            "point_3",
+            "point_4",
+            "point_5",
+            "point_6",
+            "point_7"
+        ]
+    },
+    {
+        "id": 7,
+        "logo": "",
+        "image": "",
+        "imageText": "",
+        "footerText": "",
+        "categorie": "orderFollowUp",
+        "bulletPoints": [
+            "point_1",
+            "point_2",
+            "point_3",
+            "point_4",
+            "point_5",
+            "point_6",
+            "point_7"
+        ]
+    }
+]

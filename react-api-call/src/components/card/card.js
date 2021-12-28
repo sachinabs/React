@@ -16,11 +16,6 @@ function Card() {
 
   if (product) {
     console.log(product);
-  
-  // function getNew(){
-  //   window.location.reload(true);
-  // }
-
     return (
       <div className="container">
         <div id="box">
