@@ -7,7 +7,7 @@ AWS.config.update({
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
-const TABLE_NAME = 'jokes';
+const TABLE_NAME = 'harrypotter-api';
 const getCharacters = async () => {
     const params = {
         TableName: TABLE_NAME,
